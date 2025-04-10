@@ -7,10 +7,10 @@ rojo = (255, 0, 0)
 rojo = (255, 0, 0)
 azul = (0, 0, 255)
 rosita = (200, 0, 55)
-amarillo = (200, 55, 0)
-verde = (0, 255, 0)
+amarillo = (210, 45, 0)
+verde = (0, 250, 5)
 negro = (0, 0, 0)
-
+cian = ( 0,200,250)
 
 pygame.init()
 
@@ -26,6 +26,7 @@ MOVIMIENTO = 3
 # cuadrado1
 while True:
     clock.tick(50)
+
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -46,7 +47,7 @@ while True:
 
     pygame.draw.rect(ventana, rosita, (XX, 450, 50, 50))
 
-    pygame.draw.rect(ventana, rojo, (205, 205, 100, 100))
+    pygame.draw.rect(ventana, cian , (200, 250, 100, 100))
 
     pygame.draw.rect(ventana, verde, (0, XX, 50, 50))
 
@@ -55,4 +56,4 @@ while True:
 
     
     pygame.display.flip()
-    
+
