@@ -1,6 +1,7 @@
 import pygame
 import sys
 import math 
+import random
 
 rojo = (255, 0, 0)
 azul = (0, 0, 255)
