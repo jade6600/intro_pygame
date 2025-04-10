@@ -1,78 +1,160 @@
-# Estructura de un juego en Pygame
+# Estructura de un juego en pygame
 
 ## Inicializacion
 
-- Como en todo programa en Python, se deben importar los modulos o librerias a utilizar.
+como en todo programa en python, se deben importar los modulos o librerias a utilizar.
+
 `import pygame`
 
-- Lo siguiente que se hace es inicializar Pygame usando la funcion init(). Inicializa todos los modulos de pygame importados.
-`pygame.init()`
+- inicializar pygame usando la funcion init(). Inicializa todos los modulos de pygame importados.
 
-## Visualizacion de la ventana
+``pygame.init()``
 
-`ventana = pygame.display.set_mode((600,400))`
-- Set_mode es la funcion encargada de definir el tamaño de la ventana. En el ejemplo se esta definiendo una ventana de 600 px de ancho por 400 px de alto.
+## Visualizacion de la ventanz
 
-`pygame.display.set_caption("Mi ventana)`
+``ventana= pygame.display.set_mode((600,400))``
 
-- Set_caption() es la funcion que añade un titulo a la ventana.
+- set_mode es la funcon encargada de definir el tamaño de la ventana. En el ejemplo se esta definiendo una ventana de 600 pixeles de ancho y 400 pixeles de alto. 
+
+``pygame.display.set_caption("mi ventana")``
+
+- set_caption es la funcion que añade un titulo a la ventana.
 
 ### Funcion set_mode()
 
-`set-mode(size =(0,0), flags = 0, depht = 0, display = 0)`
+``set_mode(size =(0,0), flags = 0, depth = 0, display = 0)``
 
-- size = (600,400) : define el tamañode la ventana.
-- flags : Define uno o mas comportamientos para la ventana.
-    - Valores:
+- size = (600,400) : define el tamaño de la ventana
+- flags : define uno o mas comportamientos para la ventana
+    - valores:
         - pygame.FULLSCREEN
-        - Pygame.RESIZABLE
-    - Ejemplo
-        - flags = pygame.FULLSCREEN  pygame.RESIZABLE: pantalla completa. Dimensiones modificales.
+        - pygame.RESIZABLE
+    - Ejemplo:
+        - flags = pygame.FULLSCREEN | pygame.RESIZABLE: pantalla completa, dimensiones modificables.
 
-## Bucle del juego -game loop
-- Bucle infinito que se interrumpira al cumplir ciertos criterios.
-- Reloj interno del juego.
-- En cada iteracion del bucle del juego podemos mover a un personaje, como tener en cuenta que un objeto ha alcanzado ha otro, o que se ha cruzado la linea de llegada lo que quiere decir que la partida a terminado.
-- Cada iteracion es una oportunidad para actualizar todos los datos relacionados con el estado actual de la partida en cada iteracion se realizan las siguientes tareas:
-     1. Comprobar que no se alcanzan las condiciones de parar, en cuyo caso se interrumpe el bucle. 
-     2. Actualizar los recursos necesarios para la iteracion actual.
-     3. Obtener las entradas del sistema, o de interaccion con el jugador.
-     4. Actualizar todas las entidades que caracterizan el juego.
-     5. Refrescar la pantalla.
+## Bucle de juego - game loop
 
-     ### Superficies Pygame
-     - Superficie:
-          - Elemto geometrico.
-          - Linea, poligono, imagen, texto, quien se muestra en la pantalla.
-          - El poligono se puede o no rellenar de color.
-          - La superficies se crean de diferente manera dependiendo del tipo: 
-              - Imagen: `image.load()` 
-              - Texto: `font.render()`
-              - Superficie generica: `Pygame.Surface()`
-              - Ventana del juego: `Pygame.display.set_mode()
-             `
- # Ejemplo de Banderade Colombia
+- bucle infinito quese interrumpira al cumplir ciertos criterios 
 
-``` # selecionar un color
-amarillo = (255,250,0)
+- reloj interno del juego
+
+- en cada interacion del buce del juego podemos mover a un personaje, o tener en cuenta que un objeto a alcanzado a otro, o que se a cruzado la linea de llegada lo que quiere decir que la partida ha terminado.
+
+- cada iteracion es una oportunidad para actualizar todos los datos relacionados con el estado de la partida.
+
+- en cada iteracion se realisan las siguientes tareas:
+    1. comprobar que no se alcanzan las condiciones de parada, en cuyo caso se interrumpe el bucle.
+    2. Actualizar los recursos necesarios para la iteracion actual
+    3. Obtener las entradas del sistemas, o de interaccion con el jugador.
+    4. actualizar todas las identidades que
+    caracterizan el juego.
+    5. refrescar la pantalla.
+
+## Superficies pygame
+
+- Superficie: 
+    - elemento geometrico 
+    - linea , poligono, imagen, texto, que se muestra en la pantalla.
+    - El poligono se puede o no rellenar de color.
+    - Las supericies se crean de diferente manera dependiendo del tipo:
+        - imagen: image.load()
+        - texto: font.render()
+        - superficie generica: con pygame.surface()
+        - ventana del juego: pygame.display.set_mode()
+
+# Ejemplo bandera de colombia 
+```# importamos la libreria pygame
+
+import pygame
+
+# inicializamos los modulos de pygame
+
+pygame.init()
+
+# Establecer titulo a la ventana
+
+pygame.display.set_caption("surface")
+
+# Establecemos las dimenciones de la ventana
+
+ventana = pygame.display.set_mode((400,400))
+
+# definimos un color
+amarillo = (255,255,0)
 azul = (0,0,255)
 rojo = (255,0,0)
-superficie_aleatoria = pygame.Surface((300, 300))
-
 # creamos una superficie
-amarillo_Superficie = pygame.Surface((400,200))
-azul_Superficie = pygame.Surface((400,100))
-rojo_Superficie = pygame.Surface((400,100))
 
-# Rellenamos la superficie de azul
-amarillo_Superficie.fill(amarillo)
-azul_Superficie.fill(azul)
-rojo_Superficie.fill(rojo)
+amarillo_superficie = pygame.Surface((400,200))
+azul_superficie = pygame.Surface((400,100))
+rojo_superficie = pygame.Surface((400,100))
 
+# rellenamos la superficie de azul
 
-# Inserto o muevo la superficie en la ventana
-ventana.blit(amarillo_Superficie, (0, 0))
-ventana.blit(azul_Superficie, (0, 200))
-ventana.blit(rojo_Superficie, (0, 300))
+amarillo_superficie.fill((amarillo))
+azul_superficie.fill((azul))
+rojo_superficie.fill((rojo))
+
+# inserto o muevo la superficie en la ventana
+
+ventana.blit(amarillo_superficie, (0,0))
+ventana.blit(azul_superficie, (0,200))
+ventana.blit(rojo_superficie, (0,300))
+
+# actualiza la visualizacion de la ventana
+
+pygame.display.flip()
+
+# bucle del juego
+
+while True:
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        break
+pygame.quit()
 ```
-![imagen bandera](screen.png)
+![imagen bandera](screen02.png)
+
+
+## Bandera Colombia
+
+## Gestion del tiempo y los eventos
+
+### Modulo time
+
+- Ofrece varias funciones que permiten cronometrar la sesion actual (desde el init()) o pausar, la ejecucion, por ejemplo.
+- Funciones:
+    - pygame.time.get_ticks
+    - pygame.time.waitpygame.time.delay
+
+- Objeto clock
+    - La funcion tick permite actualizar el reloj asociado con el juego actual.
+    - Se llama cada vez que se actualiza la pantalla del juego.
+    - Permite especificar el numero maximo de fotograma que se muuestran por segundo, y por tanto,limitar y controlar la velocidad de ejecucion del juego.
+    - Si insertamos en un bucle de juego la siguiente linea, garantizamos que nunca sera mas rapido de 58 fotogramas por segundo: `Clock.tick[50]`
+
+### Gestion de eventos 
+- Hay diferentes formas para que el programa sepa que se ha desencadenado un evento
+- Es ensencial qe lo programas puedan conocer inmediatamente las acciones del jugador a traves del teclado, el mouse, el joysticik o cualquier otro periferico.
+
+#### Funcion pygame.event.get
+- Permite obtener todos los eventos en espera de ser procesados y que estan disponibles en una cola.
+- Si no hay ninguno, entonces se obtiene una coleccion vacia.
+```Python
+#Usamos un ucle for para recorrer todos los eventos de la coleccion obtenida al llamar a la funccion get.
+for event in pygame.event.get()
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_ESCAPE:
+            PARAR_JUEGO = True
+``` 
+#### Funcion pygame.event.wait
+- Esta funcion espera a que ocurra un evento, y en cuento sucede esta disponible.
+
+```Python
+while True:
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        break
+``` 
+#### Funcion pygame.event.poll 
+- Devuelve solo uno de los eventos que estan en la cola de espera
