@@ -5,7 +5,7 @@ import random
 rojo = (255, 0, 0)
 azul = (0, 0, 255)
 amarillo = (255,225,0)
-morado = (180, 27, 219)
+moradito = (170, 27, 219)
 marron = (255, 0, 255)
 
 pygame.init()
@@ -53,7 +53,7 @@ while 1:
     pygame.draw.rect(ventana, rojo, (XX,0, 50, 50))
     pygame.draw.rect(ventana, amarillo,(XX,450, 50, 50))
     pygame.draw.rect(ventana, marron,(0, YY ,50, 50))
-    pygame.draw.rect(ventana, morado,(450, YY ,50, 50))
+    pygame.draw.rect(ventana, moradito,(450, YY ,50, 50))
 
     color_aleatorio = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
     pygame.draw.rect(ventana, color_aleatorio,(200,200,100,100))
