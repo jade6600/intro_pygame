@@ -20,7 +20,7 @@ PI = math.pi
 
 pygame.init()
 ventana = pygame.display.set_mode((600, 600))
-pygame.display.set_caption("Trencito")
+pygame.display.set_caption("Trenecito")
 clock = pygame.time.Clock()
 
 # nubecitas

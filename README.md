@@ -2,7 +2,7 @@
 
 ## Inicializacion
 
-como en todo programa en python, se deben importar los modulos o librerias a utilizar.
+Como en todo programa en python, se deben importar los modulos o librerias a utilizar.
 
 `import pygame`
 

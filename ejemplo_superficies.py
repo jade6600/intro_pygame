@@ -5,7 +5,7 @@ import random
 pygame.init()
 
 # Establecer título a la ventana
-pygame.display.set_caption("Superficie con color aleatorio")
+pygame.display.set_caption("Superficie con color Aleatorio")
 
 # Establecemos las dimensiones de la ventana
 ventana = pygame.display.set_mode((400, 400))

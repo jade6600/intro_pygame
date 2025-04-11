@@ -12,7 +12,7 @@ pygame.init()
 
 ventana = pygame.display.set_mode((500, 500))
 
-pygame.display.set_caption("El cuadrado que rebota")
+pygame.display.set_caption("El Cuadrado que rebota")
 
 clock = pygame.time.Clock()
 

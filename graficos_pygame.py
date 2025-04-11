@@ -17,7 +17,7 @@ pygame.init()
 
 ventana = pygame.display.set_mode((400, 400))
 
-pygame.display.set_caption("Dibujar formas con pygame")
+pygame.display.set_caption("Dibujar formas con Pygame")
 
 clock = pygame.time.Clock()
 

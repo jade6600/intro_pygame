@@ -16,7 +16,7 @@ pygame.init()
 
 ventana = pygame.display.set_mode((500, 500))
 
-pygame.display.set_caption("Primer ejercicio super dificil")
+pygame.display.set_caption("Primer ejercicio Super dificil")
 
 clock = pygame.time.Clock()
 

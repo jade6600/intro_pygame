@@ -3,7 +3,7 @@ import pygame
 pygame.init()
 
 # Establecer título a la ventana
-pygame.display.set_caption("Bandera de colombia")
+pygame.display.set_caption("Bandera de Colombia")
 
 # Establecemos las dimensiones de la ventana
 ventana = pygame.display.set_mode((400, 400))
@@ -40,3 +40,4 @@ while True:
 
 # Salimos de pygame
 pygame.quit()
+
