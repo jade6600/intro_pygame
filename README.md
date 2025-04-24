@@ -141,7 +141,7 @@ pygame.quit()
 - Permite obtener todos los eventos en espera de ser procesados y que estan disponibles en una cola.
 - Si no hay ninguno, entonces se obtiene una coleccion vacia.
 ```Python
-#Usamos un ucle for para recorrer todos los eventos de la coleccion obtenida al llamar a la funccion get.
+# Usamos un ucle for para recorrer todos los eventos de la coleccion obtenida al llamar a la funccion get.
 for event in pygame.event.get()
     if event.type == pygame.KEYDOWN:
         if event.key == pygame.K_ESCAPE:
